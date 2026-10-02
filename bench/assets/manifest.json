@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "purpose": "rigid_body_rollout_assets",
+  "registry": {
+    "path": "bench/assets/registry.json",
+    "sha256": "f56098f229774089ba95c491b36b7cfff28ba4b16c065d68a1b7e89f19bcb765"
+  },
+  "defaults": {
+    "material_class": "rigid",
+    "static_friction": 0.5,
+    "dynamic_friction": 0.5,
+    "restitution": 0.0,
+    "standing": false,
+    "tilt_limit_deg": 45.0,
+    "topple_persist_s": 0.5,
+    "rot_slip_limit_deg": 30.0,
+    "spill": null
+  },
+  "libero_contact": {
+    "condim": 4,
+    "torsional_friction": 0.05,
+    "rolling_friction": 0.002,
+    "solimp": [
+      0.999,
+      0.9999,
+      0.0005
+    ],
+    "solref": [
+      0.0005,
+      1.0
+    ]
+  },
+  "objects": {
+    "chicken-egg": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/chicken-egg/collision.obj",
+          "sha256": "b72c5679a3b0ab2c938c4daa0f165c7bbf03860e8bd75d8b58b48324f2755138"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/chicken-egg/textured.glb",
+          "sha256": "f554a117eed437291a26266f481d37519a53b0d8e55aa4dcdaf43e1bd1553fef"
+        }
+      },
+      "collision": {
+        "vertices": 2946,
+        "faces": 5888,
+        "group_markers": 1,
+        "bbox_m": {
+          "min": [
+            -0.0223,
+            -0.0223,
+            -0.03102
+          ],
+          "max": [
+            0.0223,
+            0.0223,
+            0.02538
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          0.7071067811865476,
+          0.0,
+          0.7071067811865476,
+          0.0
+        ]
+      }
+    },
+    "cherry-tomato-w30l40mm": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/cherry-tomato-w30l40mm/collision.obj",
+          "sha256": "f34d7f74ad5447a22131bb17b3659e69e515b218b00d194438b3d9147a075f61"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/cherry-tomato-w30l40mm/textured.glb",
+          "sha256": "7b5da62c754e2c21a342a83e607ffb6da09fad778937b89d8cca81f6b60c4ac7"
+        }
+      },
+      "collision": {
+        "vertices": 397,
+        "faces": 790,
+        "group_markers": 0,
+        "bbox_m": {
+          "min": [
+            -0.015,
+            -0.015,
+            -0.02
+          ],
+          "max": [
+            0.015,
+            0.015,
+            0.02
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "walnut-in-shell": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/walnut-in-shell/collision.obj",
+          "sha256": "848093a56d3e14117b9a48103140501c27b11657d09e84aaa551dea46428073b"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/walnut-in-shell/textured.glb",
+          "sha256": "b1be32e20e7b4d86b82261c5b4808dbfc96583e02657ec07d14d1196cb8ab74e"
+        }
+      },
+      "collision": {
+        "vertices": 4996,
+        "faces": 9988,
+        "group_markers": 1,
+        "bbox_m": {
+          "min": [
+            -0.01241707,
+            -0.0165,
+            -0.01173629
+          ],
+          "max": [
+            0.01241707,
+            0.0165,
+            0.01173629
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "boiled-potato": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/boiled-potato/collision.obj",
+          "sha256": "96f365b5d1df6eabb0b63b6b79b27699b73cfa2fa67ef486b77dcd6df8925404"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/boiled-potato/textured.glb",
+          "sha256": "29280df072ab5d1ffe87ebb8db5bb0b4615c5b3093313a8346fbbe92a3bb5c1c"
+        }
+      },
+      "collision": {
+        "vertices": 2142,
+        "faces": 4280,
+        "group_markers": 1,
+        "bbox_m": {
+          "min": [
+            -0.02,
+            -0.01581469,
+            -0.01951083
+          ],
+          "max": [
+            0.02,
+            0.01581469,
+            0.01951083
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "strawberry": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/strawberry/collision.obj",
+          "sha256": "adcaaea682812c58ee8e1f7bc89b3f9a78954aadf6e592ea22c85f40eb67d35e"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/strawberry/textured.glb",
+          "sha256": "f5cb46fc8407ff4bf85de2330e69dc8b9d5f0a84695499bc93f74c8a4b6cd4a2"
+        }
+      },
+      "collision": {
+        "vertices": 387,
+        "faces": 770,
+        "group_markers": 1,
+        "bbox_m": {
+          "min": [
+            -0.0135,
+            -0.01031168,
+            -0.01978213
+          ],
+          "max": [
+            0.0135,
+            0.01031168,
+            0.01978213
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "plum": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/plum/collision.obj",
+          "sha256": "a1a55913e6e62245fb87a37984d345f0737cf70b6adf8c63a48f889a6986e294"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/plum/textured.glb",
+          "sha256": "a5d2a897ba8fcd4048611d7ab75bcf711c6a3124335aa84d8669499879d2b1e9"
+        }
+      },
+      "collision": {
+        "vertices": 144,
+        "faces": 284,
+        "group_markers": 1,
+        "bbox_m": {
+          "min": [
+            -0.0225,
+            -0.0225,
+            -0.02116778
+          ],
+          "max": [
+            0.0225,
+            0.0225,
+            0.02116778
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "paper-cup-2oz": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/paper-cup-2oz/collision.obj",
+          "sha256": "3454faabfa7863f0af17d834a9dd72bf7295044fdfb2d74bbe0b9959cb040299"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/paper-cup-2oz/textured.glb",
+          "sha256": "38d9db7d6ef4d6995e04dd23c138ec5dded25c4c2091d2bda130ea446545b813"
+        }
+      },
+      "collision": {
+        "vertices": 6104,
+        "faces": 11996,
+        "group_markers": 53,
+        "bbox_m": {
+          "min": [
+            -0.02520016,
+            -0.02519977,
+            -0.025275
+          ],
+          "max": [
+            0.02520017,
+            0.02520016,
+            0.025275
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "paper-cup-takeaway": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/paper-cup-takeaway/collision.obj",
+          "sha256": "b4b8706469601e12a60d878456a6d6a350d19fa7a93fd30d29e6baacaded6a23"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/paper-cup-takeaway/textured.glb",
+          "sha256": "ff35493d1d324151bae7a2298209933068ee0f760bba6c0f8184eeec8944ff53"
+        }
+      },
+      "collision": {
+        "vertices": 3407,
+        "faces": 6678,
+        "group_markers": 0,
+        "bbox_m": {
+          "min": [
+            -0.03024988,
+            -0.03023623,
+            -0.04801109
+          ],
+          "max": [
+            0.03024988,
+            0.03024856,
+            0.04801109
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "portion-cup-1oz-pp": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/portion-cup-1oz-pp/collision.obj",
+          "sha256": "77262d7b859ae07fba13d6d7aaf9c6494f0309226c2229020ccb4782f778962d"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/portion-cup-1oz-pp/textured.glb",
+          "sha256": "696ecce03cf95206269d772cf1fda0446288f9db7588e8af7e27097bfd625657"
+        }
+      },
+      "collision": {
+        "vertices": 1327,
+        "faces": 2482,
+        "group_markers": 43,
+        "bbox_m": {
+          "min": [
+            -0.02405,
+            -0.02404963,
+            -0.0173
+          ],
+          "max": [
+            0.02405,
+            0.02404981,
+            0.0173
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "yakult-bottle": {
+      "role": "benchmark_object",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/yakult-bottle/collision.obj",
+          "sha256": "2693fd16baef561e0bcded6082a9435c1a3da0b4121c6f25940f1e8e66f4cbbb"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/yakult-bottle/textured.glb",
+          "sha256": "1133b9ec929e77273f24c348ab356bed111e32a6fdce9805fe14b261fe9f72ef"
+        }
+      },
+      "collision": {
+        "vertices": 3898,
+        "faces": 7780,
+        "group_markers": 4,
+        "bbox_m": {
+          "min": [
+            -0.01888269,
+            -0.0188827,
+            -0.03808855
+          ],
+          "max": [
+            0.01888269,
+            0.01888269,
+            0.0381095
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "egg-carton-molded-pulp": {
+      "role": "task_support",
+      "files": {
+        "collision.obj": {
+          "path": "bench/assets/models/egg-carton-molded-pulp/collision.obj",
+          "sha256": "56b6d86a7e69972b46533ff950f92d7538bee87de941f80ed0a24b79b5ef0c61"
+        },
+        "textured.glb": {
+          "path": "bench/assets/models/egg-carton-molded-pulp/textured.glb",
+          "sha256": "f952b41fd1b421455b90954858feb9f48f364b70510477ea32f47ddb1209d339"
+        }
+      },
+      "collision": {
+        "vertices": 764,
+        "faces": 1248,
+        "group_markers": 70,
+        "bbox_m": {
+          "min": [
+            -0.075,
+            -0.05008104,
+            -0.01532131
+          ],
+          "max": [
+            0.075,
+            0.05008104,
+            0.01532131
+          ]
+        }
+      },
+      "mesh_unit": "m",
+      "libero": {
+        "scale_xyz": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mesh_in_object_quat_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "table_cloth_generated_shorter": {
+      "role": "host_scene_object",
+      "files": {
+        "Image_0.001.jpg": {
+          "path": "bench/assets/models/table_cloth_generated_shorter/Image_0.001.jpg",
+          "sha256": "dd56703c28fc307420c09f55b52e7e398ba6c170c9393381aa5abbe6ae1452c1"
+        },
+        "collision.mtl": {
+          "path": "bench/assets/models/table_cloth_generated_shorter/collision.mtl",
+          "sha256": "106d1195b98060040e9f6524acba1449eb5c829de66c4c623941544f7e682ef5"
+        },
+        "collision.obj": {
+          "path": "bench/assets/models/table_cloth_generated_shorter/collision.obj",
+          "sha256": "af34ba4a89e21a7722c7f13d83f7c0fb716922bc26b100419b48348181ec255d"
+        },
+        "textured.dae": {
+          "path": "bench/assets/models/table_cloth_generated_shorter/textured.dae",
+          "sha256": "1a642896ad7fd62cafa0cd221fa8cfef4ae0b9bda94fba4a83a685a31c27472a"
+        }
+      },
+      "mesh_unit": "m"
+    }
+  }
+}

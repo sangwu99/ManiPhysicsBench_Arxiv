@@ -1,0 +1,179 @@
+{
+  "object_id": "boiled-potato",
+  "name": "boiled potato",
+  "axis": "B",
+  "tier": "high",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 39.99999910593033,
+      "y": 31.629376113414764,
+      "z": 39.021652191877365
+    },
+    "wall_thickness_mm": null,
+    "thickness_record": "—",
+    "structure": "solid",
+    "source_ids": [
+      "bench_10_1007_s00217_005_1173_9"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "solid; FEBio",
+      "criterion": "Preservation fails when tissue with PEEQ ≥ 0.002 occupies at least 1% of the initial volume.",
+      "basis": "Calibrated by reproducing published compression tests with the solver.",
+      "missing": [
+        "Effective yield calibrated to Irga2000 compression point; conditional other-year stress check, not measured microscopic onset"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": 493832.6591276327,
+        "unit": "Pa",
+        "origin": "calibrated",
+        "context": "Effective yield calibrated to Irga2000 compression point; conditional other-year stress check, not measured microscopic onset",
+        "source_ids": [
+          "bench_10_1007_s00217_005_1173_9"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": [
+          "potato_2000_fit"
+        ]
+      },
+      {
+        "parameter": "ν",
+        "value": 0.4,
+        "unit": "",
+        "origin": "assumed",
+        "context": "Effective yield calibrated to Irga2000 compression point; conditional other-year stress check, not measured microscopic onset",
+        "source_ids": [
+          "bench_10_1007_s00217_005_1173_9"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "σy (constitutive reference)",
+        "value": 56748.88744639963,
+        "unit": "Pa",
+        "origin": "calibrated",
+        "context": "Constitutive reference at p = 0; not identical to the experimental 0.2% offset definition.",
+        "source_ids": [
+          "bench_10_1007_s00217_005_1173_9"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": [
+          "potato_2000_fit"
+        ]
+      },
+      {
+        "parameter": "plastic law",
+        "value": "2 points; 1.0 max PEEQ",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "Effective yield calibrated to Irga2000 compression point; conditional other-year stress check, not measured microscopic onset",
+        "source_ids": [
+          "bench_10_1007_s00217_005_1173_9"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": [
+          "potato_2000_fit"
+        ]
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 1,
+        "scope": "Tissue compression stress at observed fracture strain",
+        "routes": [
+          "reported_material",
+          "test_calibration"
+        ],
+        "status": "conditional_comparison"
+      }
+    ],
+    "sources": [
+      "bench_10_1007_s00217_005_1173_9"
+    ],
+    "tests": [],
+    "calibrations": [
+      {
+        "id": "potato_2000_fit",
+        "performed_by": "ManiPhysicsZoo",
+        "adjusted": [
+          "E_multiplier=0.795452",
+          "yield/E_eff=0.114915"
+        ],
+        "target": "Irga 2000 compression point: 68.3 kPa at strain 0.188"
+      }
+    ],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "Stress at observed fracture strains in other years",
+        "role": "additional_condition",
+        "comparison_target": "measured_tissue_test",
+        "results": [
+          {
+            "quantity": "2001 stress",
+            "reference": 50.2,
+            "computed": 54.366,
+            "unit": "kPa",
+            "difference": "+8.30%"
+          },
+          {
+            "quantity": "2002 stress",
+            "reference": 59.1,
+            "computed": 54.104,
+            "unit": "kPa",
+            "difference": "−8.45%"
+          }
+        ],
+        "limitation": "Measured E and fracture strain supplied for each year; stresses not refitted. Not an independent prediction of fracture onset.",
+        "source_ids": [],
+        "record": null,
+        "comparison_id": "boiled-potato:comparison:1"
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Preservation fails when tissue with PEEQ ≥ 0.002 occupies at least 1% of the initial volume."
+      }
+    ],
+    "gaps": [
+      "Effective yield calibrated to Irga2000 compression point; conditional other-year stress check, not measured microscopic onset",
+      "compressive fracture event of the base scenario",
+      "earlier microscopic damage"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

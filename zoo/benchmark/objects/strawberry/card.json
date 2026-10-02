@@ -1,0 +1,167 @@
+{
+  "object_id": "strawberry",
+  "name": "strawberry",
+  "axis": "B",
+  "tier": "mid",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 27.000000700354576,
+      "y": 20.623356103897095,
+      "z": 39.564259350299835
+    },
+    "wall_thickness_mm": null,
+    "thickness_record": "—",
+    "structure": "solid",
+    "source_ids": [
+      "bench_10_1016_j_postharvbio_2022_111939"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "Effective elastoplastic cortex tissue with a hardening branch",
+      "criterion": "Preservation fails when tissue with PEEQ ≥ 0.002 occupies at least 1% of the initial volume.",
+      "basis": "Cortex bioyield-point calibration reported in the paper"
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": "306.62 kPa",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "Fit to the tissue-coupon bioyield point.",
+        "region": "effective cortex",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ],
+        "stage": "registered_record"
+      },
+      {
+        "parameter": "ν",
+        "value": "0.40",
+        "unit": "",
+        "origin": "transferred",
+        "context": "Retains ν = 0.40 cited and used by An2022; not inferred by this coupon calibration.",
+        "region": "effective cortex",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ],
+        "stage": "registered_record"
+      },
+      {
+        "parameter": "σ_y",
+        "value": "52.81 kPa",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "Fit to the tissue-coupon bioyield point.",
+        "region": "effective cortex",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ],
+        "stage": "registered_record"
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 1,
+        "scope": "Paper-reported cortex bioyield-point calibration",
+        "routes": [
+          "reported_material",
+          "test_calibration"
+        ],
+        "status": "calibration_reproduced"
+      }
+    ],
+    "comparisons": [
+      {
+        "scope": "Paper-reported hardening-model coupon: cortex bioyield point",
+        "role": "calibration_reproduction",
+        "comparison_target": "measured_tissue_test",
+        "results": [
+          {
+            "quantity": "Nominal yield stress",
+            "reference": 61,
+            "computed": 60.99772,
+            "unit": "kPa",
+            "difference": null
+          }
+        ],
+        "limitation": "Calibration-point reproduction, not an independent whole-fruit damage error or identification of the complete post-yield response.",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ],
+        "record": null
+      }
+    ],
+    "calibrations": [
+      {
+        "id": "cortex_coupon_fit",
+        "performed_by": "ManiPhysicsZoo",
+        "adjusted": [
+          "effective_E",
+          "effective_yield"
+        ],
+        "target": "An2022 cortex nominal bioyield point",
+        "fixed": [
+          "source_bioyield_point",
+          "nu"
+        ]
+      }
+    ],
+    "simulations": [
+      {
+        "solver": "CalculiX",
+        "scope": "Paper-reported free-lateral 9 x 9 x 13 mm tissue coupon with 64 solid elements",
+        "status": "60.998 kPa at the derived secant strain 61/373"
+      }
+    ],
+    "tests": [
+      {
+        "quantity": "Cortex modulus",
+        "value": 373,
+        "unit": "kPa",
+        "test": "Cortex tissue at 21 degrees C",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ]
+      },
+      {
+        "quantity": "Cortex bioyield stress",
+        "value": 61,
+        "unit": "kPa",
+        "test": "Cortex tissue at 21 degrees C",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2022_111939"
+        ]
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Preservation fails when tissue with PEEQ ≥ 0.002 occupies at least 1% of the initial volume."
+      }
+    ],
+    "sources": [
+      "bench_10_1016_j_postharvbio_2022_111939"
+    ],
+    "scope_review": {
+      "level": 1,
+      "scope": "Paper-reported cortex bioyield-point calibration",
+      "whole_object_transfer_level": 2
+    },
+    "not_supported": [
+      "The coupon calibration is not an independent validation of whole-fruit damage.",
+      "The calibration point does not identify the complete post-yield response."
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  },
+  "record_scope": "paper_reported_material_summary"
+}

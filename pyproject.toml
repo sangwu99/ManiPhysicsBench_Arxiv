@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maniphysics"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "scipy", "trimesh", "gmsh"]
+
+[project.scripts]
+maniphysics = "maniphysics.assessment.cli:main"
+maniphysics-launch = "maniphysics.evaluation.launch:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

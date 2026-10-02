@@ -1,0 +1,969 @@
+{
+  "simpler/qwengr00t": {
+    "checkpoint": "{external}/checkpoints/Qwen3VL-GR00T-Bridge-RT-1/checkpoints/steps_20000_pytorch_model.pt",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/starVLA/deployment/model_server/server_policy.py",
+        "--ckpt_path",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--use_bf16",
+        "--idle_timeout",
+        "-1"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/starVLA"
+      ],
+      "cwd": "{external}/repos/starVLA",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "starvla",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv",
+        "{external}/repos/starVLA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/langforce": {
+    "checkpoint": "{external}/checkpoints/LangForce/LangForce_SimplerEnv_Better/checkpoints/steps_50000_pytorch_model.pt",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/starVLA/deployment/model_server/server_policy.py",
+        "--ckpt_path",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--use_bf16",
+        "--idle_timeout",
+        "-1"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/starVLA"
+      ],
+      "cwd": "{external}/repos/starVLA",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "starvla",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv",
+        "{external}/repos/starVLA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/internvla-m1": {
+    "checkpoint": "{external}/checkpoints/InternVLA-M1-Pretrain-RT-1-Bridge/checkpoints/steps_50000_pytorch_model.pt",
+    "server": {
+      "python": "m1",
+      "arguments": [
+        "{external}/repos/InternVLA-M1/deployment/model_server/server_policy_M1.py",
+        "--ckpt_path",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--use_bf16"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/InternVLA-M1"
+      ],
+      "cwd": "{external}/repos/InternVLA-M1",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "m1",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv",
+        "{external}/repos/InternVLA-M1"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/vla-jepa": {
+    "checkpoint": "{external}/checkpoints/VLA-JEPA/SimplerEnv/checkpoints/VLA-JEPA-SimplerEnv.pt",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/VLA-JEPA/deployment/model_server/server_policy.py",
+        "--ckpt_path",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--use_bf16"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/VLA-JEPA"
+      ],
+      "cwd": "{external}/repos/VLA-JEPA",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "vlajepa",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv",
+        "{external}/repos/VLA-JEPA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/groot-n17": {
+    "checkpoint": "{external}/checkpoints/GR00T-N1.7-bridge",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/Isaac-GR00T/gr00t/eval/run_gr00t_server.py",
+        "--model_path",
+        "{checkpoint}",
+        "--embodiment_tag",
+        "simpler_env_widowx",
+        "--port",
+        "{port}",
+        "--use_sim_policy_wrapper"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/Isaac-GR00T"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "gr00t",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "GR00T_REPO": "{external}/repos/Isaac-GR00T"
+      }
+    },
+    "platform": "simpler"
+  },
+  "simpler/groot-n16": {
+    "checkpoint": "{external}/checkpoints/GR00T-N1.6-bridge",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/Isaac-GR00T-n16/gr00t/eval/run_gr00t_server.py",
+        "--model_path",
+        "{checkpoint}",
+        "--embodiment_tag",
+        "OXE_WIDOWX",
+        "--port",
+        "{port}",
+        "--use_sim_policy_wrapper"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_tf451",
+        "{external}/repos/Isaac-GR00T-n16"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "gr00t",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "GR00T_REPO": "{external}/repos/Isaac-GR00T-n16"
+      }
+    },
+    "platform": "simpler"
+  },
+  "simpler/octo": {
+    "checkpoint": "{external}/checkpoints/Octo-Base",
+    "server": {
+      "python": "octo",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.policy_server",
+        "--model",
+        "octo",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "remote",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/spatialvla": {
+    "checkpoint": "{external}/checkpoints/SpatialVLA-4B-224-pt",
+    "server": {
+      "python": "spatialvla",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.policy_server",
+        "--model",
+        "spatialvla",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "remote",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/cogact": {
+    "checkpoint": "{external}/checkpoints/CogACT/checkpoints/CogACT-Base.pt",
+    "server": {
+      "python": "cogact",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.servers.cogact_server",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/CogACT"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "MPB_OPENVLA_REPO": "{openvla_repo}"
+      }
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "cogact",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "simpler/pi0": {
+    "checkpoint": "{external}/checkpoints/open-pi-zero-bridge/bridge_beta_step19296_2024-12-26_22-30_42.pt",
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.servers.pizero_server",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/open-pi-zero",
+        "{external}/repos/open-pi-zero/.deps"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "runner": {
+      "python": "simpler",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.run_policy_eval",
+        "--env",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--port",
+        "{port}",
+        "--out-dir",
+        "{rollout}",
+        "--client",
+        "pizero",
+        "--ckpt",
+        "{checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/SimplerEnv"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "platform": "simpler"
+  },
+  "libero/groot-n17": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/GR00T-N1.7-LIBERO/libero_object",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.groot.run_libero_groot",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--api",
+        "n17",
+        "--model-slug",
+        "groot-n17",
+        "--replan-steps",
+        "8"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "GR00T_REPO": "{external}/repos/Isaac-GR00T"
+      }
+    },
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "{external}/repos/Isaac-GR00T/gr00t/eval/run_gr00t_server.py",
+        "--model_path",
+        "{checkpoint}",
+        "--embodiment_tag",
+        "LIBERO_PANDA",
+        "--port",
+        "{port}",
+        "--use_sim_policy_wrapper"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/Isaac-GR00T"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/abot-m0": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/ABot-M0-LIBERO/checkpoints/steps_40000_pytorch_model.pt",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.abot.run_libero_abot",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--model-slug",
+        "abot-m0"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "starvla",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.abot.abot_server",
+        "--ckpt",
+        "{checkpoint}",
+        "--base-vlm",
+        "{external}/checkpoints/Qwen3-VL-4B-Instruct",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/ABot-Manipulation-M0",
+        "{external}/repos/vggt"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "HF_HUB_OFFLINE": "1"
+      }
+    }
+  },
+  "libero/smolvla": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/smolvla_libero",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.smolvla.run_libero_smolvla",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "smolvla",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.smolvla.smolvla_server",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--n-action-steps",
+        "1"
+      ],
+      "pythonpath": [
+        "{root}/src"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/molmoact2": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/MolmoAct2-LIBERO",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.molmoact2.run_libero_molmoact2",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--dump-grips"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "molmoact2",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.molmoact2.server",
+        "--ckpt",
+        "{checkpoint}",
+        "--port",
+        "{port}",
+        "--dtype",
+        "float32"
+      ],
+      "pythonpath": [
+        "{root}/src"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/octo": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/Octo-Base-LIBERO/2025-06-19_octo_base_1p5_libero_finetune",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.run_libero",
+        "--port",
+        "{port}",
+        "--n-ep",
+        "{episodes}",
+        "--envs",
+        "{task}",
+        "--out",
+        "{rollout}",
+        "--dump-grips"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "octo",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.octo.server",
+        "--ckpt",
+        "{checkpoint}",
+        "--step",
+        "35000",
+        "--unnorm-key",
+        "libero_object",
+        "--port",
+        "{port}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/octo"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/pi0": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/openpi/pi0_libero",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.openpi.run_libero_openpi",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--model-slug",
+        "pi0"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO",
+        "{external}/repos/openpi/packages/openpi-client/src",
+        "{external}/repos/_openpi_client_deps"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "openpi",
+      "arguments": [
+        "{external}/repos/openpi/scripts/serve_policy.py",
+        "--port",
+        "{port}",
+        "policy:checkpoint",
+        "--policy.config=pi0_libero",
+        "--policy.dir={checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_openpi_stubs"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.55"
+      }
+    }
+  },
+  "libero/pi05": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/openpi/pi05_libero",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.openpi.run_libero_openpi",
+        "--port",
+        "{port}",
+        "--episodes",
+        "{episodes}",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--model-slug",
+        "pi05"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO",
+        "{external}/repos/openpi/packages/openpi-client/src",
+        "{external}/repos/_openpi_client_deps"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    },
+    "server": {
+      "python": "openpi",
+      "arguments": [
+        "{external}/repos/openpi/scripts/serve_policy.py",
+        "--port",
+        "{port}",
+        "policy:checkpoint",
+        "--policy.config=pi05_libero",
+        "--policy.dir={checkpoint}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_openpi_stubs"
+      ],
+      "cwd": "{root}",
+      "env": {
+        "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.55"
+      }
+    }
+  },
+  "libero/openvla-oft": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/openvla-7b-oft-libero-object",
+    "runner": {
+      "python": "oft",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.openvla_oft.run_libero_oft",
+        "--model-slug",
+        "openvla-oft",
+        "--checkpoint",
+        "{checkpoint}",
+        "--episodes",
+        "{episodes}",
+        "--max-steps",
+        "600",
+        "--attn",
+        "sdpa",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO",
+        "{external}/repos/openvla-oft"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/ript-vla": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/openvla-7b-oft-libero-object",
+    "runner": {
+      "python": "oft",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.openvla_oft.run_libero_oft",
+        "--model-slug",
+        "ript-vla",
+        "--checkpoint",
+        "{checkpoint}",
+        "--episodes",
+        "{episodes}",
+        "--max-steps",
+        "600",
+        "--attn",
+        "sdpa",
+        "--tasks",
+        "{task}",
+        "--out-dir",
+        "{rollout}",
+        "--ript-lora",
+        "{external}/checkpoints/RIPT_VLA/openvla_oft/ript_adaptors/LIBERO_OBJECT_lora"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/LIBERO",
+        "{external}/repos/openvla-oft",
+        "{external}/repos/RIPT-VLA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/vla-adapter": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/VLA-Adapter-LIBERO-Object-Pro",
+    "runner": {
+      "python": "oft",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.vla_adapter.run_libero_vla_adapter",
+        "--ckpt",
+        "{checkpoint}",
+        "--out",
+        "{rollout}",
+        "--n-ep",
+        "{episodes}",
+        "--envs",
+        "{task}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_vla_adapter_deps",
+        "{external}/repos/LIBERO",
+        "{external}/repos/VLA-Adapter"
+      ],
+      "cwd": "{external}/repos/VLA-Adapter",
+      "env": {}
+    }
+  },
+  "libero/univla": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/univla-7b-224-sft-libero/univla-libero-object",
+    "runner": {
+      "python": "oft",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.univla.run_libero_univla",
+        "--checkpoint",
+        "{checkpoint}",
+        "--out",
+        "{rollout}",
+        "--episodes",
+        "{episodes}",
+        "--suffixes",
+        "{task}",
+        "--save-video-eps",
+        "0"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_univla_deps",
+        "{external}/repos/LIBERO",
+        "{external}/repos/UniVLA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  },
+  "libero/dreamvla": {
+    "platform": "libero",
+    "checkpoint": "{external}/checkpoints/DreamVLA/libero_obj_94.pth",
+    "runner": {
+      "python": "libero",
+      "arguments": [
+        "-m",
+        "maniphysics.evaluation.libero.dreamvla.run_libero_dreamvla",
+        "--ckpt",
+        "{checkpoint}",
+        "--vit-ckpt",
+        "{external}/checkpoints/DreamVLA/vit_mae/mae_pretrain_vit_base.pth",
+        "--tasks",
+        "{task}",
+        "--episodes",
+        "{episodes}",
+        "--out-dir",
+        "{rollout}"
+      ],
+      "pythonpath": [
+        "{root}/src",
+        "{external}/repos/_dreamvla_deps",
+        "{external}/repos/LIBERO",
+        "{external}/repos/DreamVLA"
+      ],
+      "cwd": "{root}",
+      "env": {}
+    }
+  }
+}

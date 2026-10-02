@@ -1,0 +1,170 @@
+{
+  "object_id": "yakult-bottle",
+  "name": "Yakult-type HIPS bottle",
+  "axis": "C",
+  "tier": "low",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 37.00000047683716,
+      "y": 37.00000420212746,
+      "z": 75.42580366134644
+    },
+    "wall_thickness_mm": 0.5,
+    "thickness_record": "0.50 mm (0.40–0.70)",
+    "structure": "shell",
+    "source_ids": [
+      "bench_10_1038_s41598_022_16511_w"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "shell; OpenRadioss",
+      "criterion": "Plasticity-based preservation fails when max PEEQ ≥ 0.002 over the object shell elements and through-thickness integration points. No minimum affected-volume fraction is required; purely elastic buckling does not satisfy this criterion.",
+      "basis": "Representative injection-molded HIPS is assigned to the bottle geometry.",
+      "missing": [
+        "Fu2022 representative injection-molded HIPS; NOT PS456EB or a measured Yakult batch; nu=.35 is a representative separate-source assumption"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": 2041000000.0,
+        "unit": "Pa",
+        "origin": "transferred",
+        "context": "Fu2022 representative injection-molded HIPS; NOT PS456EB or a measured Yakult batch; nu=.35 is a representative separate-source assumption",
+        "source_ids": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ]
+      },
+      {
+        "parameter": "ν",
+        "value": 0.35,
+        "unit": "",
+        "origin": "assumed",
+        "context": "Fu2022 representative injection-molded HIPS; NOT PS456EB or a measured Yakult batch; nu=.35 is a representative separate-source assumption",
+        "source_ids": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "σy (constitutive reference)",
+        "value": 23651551.735164206,
+        "unit": "Pa",
+        "origin": "transferred",
+        "context": "Constitutive reference at p = 0; not identical to the experimental 0.2% offset definition.",
+        "source_ids": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ]
+      },
+      {
+        "parameter": "plastic law",
+        "value": "17 points; 0.01 max PEEQ",
+        "unit": "",
+        "origin": "transferred",
+        "context": "Fu2022 representative injection-molded HIPS; NOT PS456EB or a measured Yakult batch; nu=.35 is a representative separate-source assumption",
+        "source_ids": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ]
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 2,
+        "scope": "Representative literature constitutive law and container geometry",
+        "routes": [
+          "constitutive_geometry"
+        ],
+        "status": "material_and_numerical_support"
+      }
+    ],
+    "sources": [
+      "bench_10_1038_s41598_022_16511_w",
+      "bench_10_3390_polym15204076"
+    ],
+    "tests": [],
+    "calibrations": [],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "HIPS curve transfer, pure bending, and mesh checks",
+        "role": "numerical_verification",
+        "comparison_target": "constitutive_law_and_analytical_solution",
+        "results": [],
+        "limitation": "Not a reproduction of the HIPS specimen test or a specific yogurt bottle's measured damage load.",
+        "source_ids": [],
+        "record": null,
+        "comparison_id": "yakult-bottle:comparison:1"
+      }
+    ],
+    "proxy_links": [
+      {
+        "object": "Fu2022 injection-molded HIPS specimen",
+        "transfer": "E and the initial plasticity curve applied to a representative HIPS bottle",
+        "justification": "Representative constitutive law for the same resin family",
+        "limits": "Does not validate an actual Yakult batch or molding history.",
+        "source_ids": [
+          "bench_10_1038_s41598_022_16511_w",
+          "bench_10_3390_polym15204076"
+        ]
+      }
+    ],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Plasticity-based preservation fails when max PEEQ ≥ 0.002 over the object shell elements and through-thickness integration points. No minimum affected-volume fraction is required; purely elastic buckling does not satisfy this criterion."
+      }
+    ],
+    "gaps": [
+      "Fu2022 representative injection-molded HIPS; NOT PS456EB or a measured Yakult batch; nu=.35 is a representative separate-source assumption",
+      "unloading/recovery after the declared event",
+      "buckling and large-deflection collapse beyond it",
+      "product-specific strength"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "objects": [
+    {
+      "object_id": "chicken-egg",
+      "card": "objects/chicken-egg/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "cherry-tomato-w30l40mm",
+      "card": "objects/cherry-tomato-w30l40mm/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "walnut-in-shell",
+      "card": "objects/walnut-in-shell/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "boiled-potato",
+      "card": "objects/boiled-potato/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "strawberry",
+      "card": "objects/strawberry/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "plum",
+      "card": "objects/plum/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "paper-cup-2oz",
+      "card": "objects/paper-cup-2oz/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "paper-cup-takeaway",
+      "card": "objects/paper-cup-takeaway/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "portion-cup-1oz-pp",
+      "card": "objects/portion-cup-1oz-pp/card.json",
+      "aliases": []
+    },
+    {
+      "object_id": "yakult-bottle",
+      "card": "objects/yakult-bottle/card.json",
+      "aliases": []
+    }
+  ],
+  "geometry_paths": {
+    "chicken-egg": "objects/chicken-egg/fem_surface.obj",
+    "cherry-tomato-w30l40mm": "objects/cherry-tomato-w30l40mm/fem_surface.obj",
+    "walnut-in-shell": "objects/walnut-in-shell/fem_surface.obj",
+    "boiled-potato": "objects/boiled-potato/fem_surface.obj",
+    "strawberry": "objects/strawberry/fem_surface.obj",
+    "plum": "objects/plum/fem_surface.obj",
+    "paper-cup-2oz": "objects/paper-cup-2oz/collision.obj",
+    "paper-cup-2oz__mid": "objects/paper-cup-2oz/fem_surface.obj",
+    "paper-cup-takeaway": "objects/paper-cup-takeaway/collision.obj",
+    "paper-cup-takeaway__open": "objects/paper-cup-takeaway/fem_surface.obj",
+    "portion-cup-1oz-pp": "objects/portion-cup-1oz-pp/collision.obj",
+    "portion-cup-1oz-pp__mid": "objects/portion-cup-1oz-pp/fem_surface.obj",
+    "yakult-bottle": "objects/yakult-bottle/collision.obj",
+    "yakult-bottle__mid": "objects/yakult-bottle/fem_surface.obj"
+  }
+}

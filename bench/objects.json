@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "rollout_assets": "bench/assets/manifest.json",
+  "platforms": {
+    "simpler": {
+      "robot": "widowx",
+      "kp_N_m": 1000.0,
+      "actuator_limit_N": 60.0,
+      "axes": {
+        "A": {
+          "high": "chicken-egg",
+          "mid": "cherry-tomato-w30l40mm",
+          "low": "walnut-in-shell"
+        },
+        "B": {
+          "high": "boiled-potato",
+          "mid": "strawberry",
+          "low": "plum"
+        },
+        "C": {
+          "high": "paper-cup-2oz",
+          "mid": "portion-cup-1oz-pp",
+          "low": "yakult-bottle"
+        }
+      }
+    },
+    "libero": {
+      "robot": "panda",
+      "kp_N_m": 1000.0,
+      "actuator_limit_N": 20.0,
+      "axes": {
+        "A": {
+          "high": "chicken-egg",
+          "mid": "cherry-tomato-w30l40mm",
+          "low": "walnut-in-shell"
+        },
+        "B": {
+          "high": "boiled-potato",
+          "mid": "strawberry",
+          "low": "plum"
+        },
+        "C": {
+          "high": "paper-cup-takeaway",
+          "mid": "portion-cup-1oz-pp",
+          "low": "yakult-bottle"
+        }
+      }
+    }
+  }
+}

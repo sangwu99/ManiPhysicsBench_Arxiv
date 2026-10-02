@@ -1,0 +1,207 @@
+{
+  "object_id": "plum",
+  "name": "plum",
+  "axis": "B",
+  "tier": "low",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 45,
+      "y": 45,
+      "z": 42.335571198621196
+    },
+    "wall_thickness_mm": 0.1,
+    "thickness_record": "skin 0.1 mm",
+    "structure": "skin_core",
+    "source_ids": [
+      "bench_10_1093_aobpla_plu019"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "skin_core; FEBio",
+      "criterion": "Skin membrane resultant or core plastic volume: 249.68 N/m or 5%",
+      "basis": "Flesh properties come from loquat, and skin properties from plum bulge tests.",
+      "missing": [
+        "homogeneous core omits stone and tissue heterogeneity",
+        "bilinear isotropic constitutive input; published conditional yield used as reference onset",
+        "published 0.28 MPa used as solver yield parameter; finite nominal first-yield stress is about 0.312 MPa in the declared coupon",
+        "skin effective membrane resultants; declared maximum principal tension extension from bulge"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "core E",
+        "value": "1.93 MPa",
+        "unit": "",
+        "origin": "transferred",
+        "context": "Liu2025 loquat-flesh properties transferred to a homogeneous plum core; not measured directly on plum.",
+        "source_ids": [
+          "bench_10_3390_horticulturae11040440"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_3390_horticulturae11040440"
+        ]
+      },
+      {
+        "parameter": "ν",
+        "value": "0.36",
+        "unit": "",
+        "origin": "transferred",
+        "context": "Liu2025 loquat-flesh properties transferred to a homogeneous plum core; not measured directly on plum.",
+        "source_ids": [
+          "bench_10_3390_horticulturae11040440"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_3390_horticulturae11040440"
+        ]
+      },
+      {
+        "parameter": "σ_y",
+        "value": "0.28 MPa → 5.737 MPa @ p = 0.5",
+        "unit": "",
+        "origin": "transferred",
+        "context": "Liu2025 loquat-flesh properties transferred to a homogeneous plum core; not measured directly on plum.",
+        "source_ids": [
+          "bench_10_3390_horticulturae11040440"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_3390_horticulturae11040440"
+        ]
+      },
+      {
+        "parameter": "skin E",
+        "value": "19.017 MPa",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "Effective skin E fitted to the Brüggenwirth2014 Hanita bulge response; not a direct copy of the reported 35.9 MPa.",
+        "source_ids": [
+          "bench_10_1093_aobpla_plu019"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": [
+          "hanita_membrane_fit"
+        ]
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 1,
+        "scope": "Skin bulge rupture pressure",
+        "routes": [
+          "test_calibration"
+        ],
+        "status": "cross_cultivar_comparison"
+      },
+      {
+        "level": 2,
+        "scope": "Flesh plasticity and bruising model",
+        "routes": [
+          "analogous_transfer"
+        ],
+        "status": "material_support"
+      }
+    ],
+    "sources": [
+      "bench_10_1093_aobpla_plu019",
+      "bench_10_3390_horticulturae11040440"
+    ],
+    "tests": [],
+    "calibrations": [
+      {
+        "id": "hanita_membrane_fit",
+        "performed_by": "ManiPhysicsZoo",
+        "adjusted": [
+          "effective_membrane_E",
+          "membrane_failure_resultant"
+        ],
+        "target": "Hanita bulge test: 53.1 kPa",
+        "output": "Membrane rupture criterion: 249.680 N/m"
+      }
+    ],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "Other-cultivar rupture pressures with a fixed membrane criterion",
+        "role": "additional_condition",
+        "comparison_target": "measured_skin_bulge_test",
+        "results": [
+          {
+            "quantity": "Wangenheim",
+            "reference": 65.8,
+            "computed": 59.675,
+            "unit": "kPa",
+            "difference": "−9.31%"
+          },
+          {
+            "quantity": "Nancy",
+            "reference": 56.8,
+            "computed": 58.384,
+            "unit": "kPa",
+            "difference": "+2.79%"
+          }
+        ],
+        "limitation": "Reported cultivar-specific E supplied; rupture criterion not refitted. Does not validate whole-flesh or grasp behavior.",
+        "source_ids": [
+          "bench_10_1093_aobpla_plu019"
+        ],
+        "record": null,
+        "comparison_id": "plum:comparison:1"
+      }
+    ],
+    "proxy_links": [
+      {
+        "object": "Loquat flesh (Liu2025)",
+        "transfer": "E = 1.93 MPa, ν = 0.36, σy = 0.28 MPa, total tangent Et = 1.64 MPa, and a bilinear elastoplastic law transferred to a homogeneous plum core",
+        "justification": "Shared contact-deformation and bruising mechanism in fleshy fruit; the source compares loquat drop tests with FE results.",
+        "limits": "Not measured plum-cultivar flesh properties; the stone is omitted and local-grasp accuracy is not inherited.",
+        "source_ids": [
+          "bench_10_3390_horticulturae11040440"
+        ]
+      }
+    ],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Skin membrane resultant or core plastic volume: 249.68 N/m or 5%"
+      }
+    ],
+    "gaps": [
+      "homogeneous core omits stone and tissue heterogeneity",
+      "bilinear isotropic constitutive input; published conditional yield used as reference onset",
+      "published 0.28 MPa used as solver yield parameter; finite nominal first-yield stress is about 0.312 MPa in the declared coupon",
+      "skin effective membrane resultants; declared maximum principal tension extension from bulge",
+      "all earlier skin microcracks",
+      "all skin bending fracture modes",
+      "product-specific plum strength"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

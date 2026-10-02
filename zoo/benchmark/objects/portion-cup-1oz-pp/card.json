@@ -1,0 +1,161 @@
+{
+  "object_id": "portion-cup-1oz-pp",
+  "name": "1 oz PP portion cup",
+  "axis": "C",
+  "tier": "mid",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 48.09999838471413,
+      "y": 48.09999838471413,
+      "z": 34.60000082850456
+    },
+    "wall_thickness_mm": 0.3,
+    "thickness_record": "0.30 mm (0.20–0.40)",
+    "structure": "shell",
+    "source_ids": [
+      "bench_10_3390_polym16152128"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "shell; OpenRadioss",
+      "criterion": "Plasticity-based preservation failure occurs when maximum PEEQ across shell elements and thickness integration points reaches 0.002, without a minimum damaged volume. Elastic buckling alone does not satisfy this criterion. An additional functional collapse criterion applies when total pad-backing closure reaches d0 - 2h during bilateral contact, where d0 is the initial recorded contact spacing and h is wall thickness. This approximates opposite-wall contact and loss of usable space, not residual indentation after unloading.",
+      "basis": "The published resin model is fitted to a 25 MPa yield stress.",
+      "missing": [
+        "SABIC83MF10 reference as modeled in Kasprzak2024, fitted yield25MPa; not TDS23MPa"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": 1200000000.0,
+        "unit": "Pa",
+        "origin": "calibrated",
+        "context": "SABIC83MF10 reference as modeled in Kasprzak2024, fitted yield25MPa; not TDS23MPa",
+        "source_ids": [
+          "bench_10_3390_polym16152128"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      },
+      {
+        "parameter": "ν",
+        "value": 0.4,
+        "unit": "",
+        "origin": "calibrated",
+        "context": "SABIC83MF10 reference as modeled in Kasprzak2024, fitted yield25MPa; not TDS23MPa",
+        "source_ids": [
+          "bench_10_3390_polym16152128"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      },
+      {
+        "parameter": "σy (constitutive reference)",
+        "value": 25000000.0,
+        "unit": "Pa",
+        "origin": "calibrated",
+        "context": "Constitutive reference at p = 0; not identical to the experimental 0.2% offset definition.",
+        "source_ids": [
+          "bench_10_3390_polym16152128"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      },
+      {
+        "parameter": "plastic law",
+        "value": "101 points; 0.010000000000000002 max PEEQ",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "SABIC83MF10 reference as modeled in Kasprzak2024, fitted yield25MPa; not TDS23MPa",
+        "source_ids": [
+          "bench_10_3390_polym16152128"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 2,
+        "scope": "Representative literature constitutive law and container geometry",
+        "routes": [
+          "constitutive_geometry"
+        ],
+        "status": "material_and_numerical_support"
+      }
+    ],
+    "sources": [
+      "bench_10_3390_polym16152128"
+    ],
+    "tests": [],
+    "calibrations": [],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "PP plasticity-table interpolation",
+        "role": "constitutive_verification",
+        "comparison_target": "source_constitutive_law",
+        "results": [
+          {
+            "quantity": "Maximum interpolation error",
+            "reference": null,
+            "computed": 0.032479,
+            "unit": "%",
+            "difference": null
+          }
+        ],
+        "limitation": "This comparison has FEM_run=false; it is not evidence of a PP bending test.",
+        "source_ids": [],
+        "record": null,
+        "comparison_id": "portion-cup-1oz-pp:comparison:1"
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Plasticity-based preservation fails when max PEEQ ≥ 0.002 over the object shell elements and through-thickness integration points. No minimum affected-volume fraction is required; purely elastic buckling does not satisfy this criterion."
+      },
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Separate functional-collapse criterion: preservation fails if total pad-backing closure Δ_b ≥ d_0 − 2h while bilateral pad contact is maintained. Here d_0 is the initial recorded contact-point separation and h is wall thickness. This approximates opposite-wall contact and loss of usable space, rather than measuring residual indentation after unloading."
+      }
+    ],
+    "gaps": [
+      "SABIC83MF10 reference as modeled in Kasprzak2024, fitted yield25MPa; not TDS23MPa",
+      "unloading/recovery after the declared event",
+      "buckling and large-deflection collapse beyond it",
+      "product-specific strength"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

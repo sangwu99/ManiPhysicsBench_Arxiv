@@ -1,0 +1,286 @@
+{
+  "object_id": "chicken-egg",
+  "name": "egg",
+  "axis": "A",
+  "tier": "high",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 44.599998742341995,
+      "y": 44.599998742341995,
+      "z": 56.40000104904175
+    },
+    "wall_thickness_mm": 0.36,
+    "thickness_record": "0.36 mm",
+    "structure": "shell",
+    "source_ids": [
+      "bench_arXiv_2211_00190"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "shell; CalculiX",
+      "criterion": "Maximum principal stress σ₁: 19.9 MPa",
+      "basis": "Material constants adopted as reported in the source.",
+      "missing": [
+        "source mean properties on benchmark geometry"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": "30.0 GPa",
+        "unit": "",
+        "origin": "reported",
+        "context": "Material constants adopted as reported in the source.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_arXiv_2211_00190"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "ν",
+        "value": "0.30",
+        "unit": "",
+        "origin": "reported",
+        "context": "Material constants adopted as reported in the source.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_arXiv_2211_00190"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "Constitutive law",
+        "value": "Linear elastic",
+        "unit": "",
+        "origin": "reported",
+        "context": "Material constants adopted as reported in the source.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_arXiv_2211_00190"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "σt",
+        "value": 19.9,
+        "unit": "MPa",
+        "origin": "reported",
+        "context": "Inferred by Liu et al. from specimen breaking loads and FE stresses.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_arXiv_2211_00190"
+        ],
+        "derived_from": [],
+        "transferred_from": [],
+        "source_method": "breaking_load_and_FE_inverse_in_source"
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 1,
+        "scope": "Half-eggshell breaking loads at three loading positions",
+        "routes": [
+          "reported_material",
+          "constitutive_geometry"
+        ],
+        "status": "additional_failure_test_compared"
+      }
+    ],
+    "sources": [
+      "bench_arXiv_2211_00190"
+    ],
+    "tests": [
+      {
+        "quantity": "Half-eggshell breaking loads: sharp / blunt / equator",
+        "value": [
+          50.0,
+          46.0,
+          35.0
+        ],
+        "unit": "N",
+        "event": "outer_surface_breaking",
+        "test": "Liu profile: 2a=56.4 mm, 2b=44.6 mm, e=2.1 mm; three compression positions on half shells. Approximate values read from Fig. S5.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "test_id": "chicken-egg:test:1"
+      }
+    ],
+    "calibrations": [
+      {
+        "id": "egg_patch_sweep",
+        "performed_by": "ManiPhysicsZoo",
+        "adjusted": [
+          "contact_patch_radius"
+        ],
+        "target": "Published inner-surface stress",
+        "calibrated_on": "bench_arXiv_2211_00190"
+      }
+    ],
+    "simulations": [
+      {
+        "solver": "CalculiX S6, linear elasticity",
+        "status": "completed_response_comparison",
+        "scope": "Half shell with a roller-supported cut rim and uniform pressure patch. Fixed E=30 GPa, nu=0.3 and tensile strength 19.9 MPa; 30 patch, thickness and mesh conditions.",
+        "input_scope": "literature_half_shell_test",
+        "runtime_adopted": false
+      }
+    ],
+    "comparisons": [
+      {
+        "scope": "Half-eggshell breaking loads at three loading positions",
+        "role": "additional_test_without_material_refitting",
+        "comparison_target": "measured_breaking_load + published_fem",
+        "results": [
+          {
+            "quantity": "Sharp end outer-crack load / experiment",
+            "reference": 50.0,
+            "computed": 57.6,
+            "unit": "N",
+            "difference": "+15.2%"
+          },
+          {
+            "quantity": "Sharp end outer-crack load / source FE",
+            "reference": 56.0,
+            "computed": 57.6,
+            "unit": "N",
+            "difference": "+2.9%"
+          },
+          {
+            "quantity": "Blunt end outer-crack load / experiment",
+            "reference": 46.0,
+            "computed": 55.8,
+            "unit": "N",
+            "difference": "+21.2%"
+          },
+          {
+            "quantity": "Blunt end outer-crack load / source FE",
+            "reference": 54.5,
+            "computed": 55.8,
+            "unit": "N",
+            "difference": "+2.3%"
+          },
+          {
+            "quantity": "Equator outer-crack load / experiment",
+            "reference": 35.0,
+            "computed": 37.8,
+            "unit": "N",
+            "difference": "+7.9%"
+          },
+          {
+            "quantity": "Equator outer-crack load / source FE",
+            "reference": 37.5,
+            "computed": 37.8,
+            "unit": "N",
+            "difference": "+0.7%"
+          }
+        ],
+        "limitation": "Compression-test comparison with properties fixed from separate tensile specimens. Reference loads are read from Fig. S5. Outer-surface stress is evaluated more than 1 mm from the load point; the reported runs use a 0.5 mm patch radius and 0.36 mm shell thickness. This outer-surface breaking event is distinct from first inner-surface cracking in benchmark grasps.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "comparison_id": "chicken-egg:comparison:1"
+      },
+      {
+        "scope": "Localization of the benchmark crack-initiation criterion",
+        "role": "benchmark_event_localization",
+        "comparison_target": "recorded_fem_stress_fields",
+        "results": [
+          {
+            "quantity": "Cases first reaching the criterion on the inner surface",
+            "reference": null,
+            "computed": 25,
+            "unit": "of 25",
+            "difference": null
+          },
+          {
+            "quantity": "Outer stress / tensile strength at that time",
+            "reference": null,
+            "computed": [
+              14.0,
+              21.9
+            ],
+            "unit": "%",
+            "difference": null
+          }
+        ],
+        "limitation": "Output inspection of 25 randomly selected existing grasp analyses. All first reached the criterion on the inner surface beneath the pad. This checks the identity of the assessed event, not a separate physical grasp experiment.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "comparison_id": "chicken-egg:comparison:2"
+      },
+      {
+        "scope": "Shell stress under an imposed 49 N load",
+        "role": "calibration_reproduction + additional_response_same_setup",
+        "comparison_target": "published_fem",
+        "results": [
+          {
+            "quantity": "Inner-surface stress",
+            "reference": 480,
+            "computed": 434,
+            "unit": "MPa",
+            "difference": "−9.6%"
+          },
+          {
+            "quantity": "Outer-surface stress",
+            "reference": 17.3,
+            "computed": 15.3,
+            "unit": "MPa",
+            "difference": "−11.6%"
+          }
+        ],
+        "limitation": "49 N is an input, not an independently predicted breaking load.",
+        "source_ids": [
+          "bench_arXiv_2211_00190"
+        ],
+        "record": null,
+        "comparison_id": "chicken-egg:comparison:3"
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Maximum principal stress σ₁: 19.9 MPa"
+      }
+    ],
+    "gaps": [
+      "source mean properties on benchmark geometry"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

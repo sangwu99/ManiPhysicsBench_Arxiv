@@ -1,0 +1,44 @@
+{
+  "objects": [
+    {
+      "gallery_object_id": "chicken-egg",
+      "runtime_object_id": "chicken-egg"
+    },
+    {
+      "gallery_object_id": "cherry-tomato",
+      "runtime_object_id": "cherry-tomato-w30l40mm"
+    },
+    {
+      "gallery_object_id": "walnut-in-shell",
+      "runtime_object_id": "walnut-in-shell"
+    },
+    {
+      "gallery_object_id": "boiled-potato",
+      "runtime_object_id": "boiled-potato"
+    },
+    {
+      "gallery_object_id": "strawberry",
+      "runtime_object_id": "strawberry"
+    },
+    {
+      "gallery_object_id": "plum",
+      "runtime_object_id": "plum"
+    },
+    {
+      "gallery_object_id": "paper-cup-2oz",
+      "runtime_object_id": "paper-cup-2oz"
+    },
+    {
+      "gallery_object_id": "paper-cup-takeaway",
+      "runtime_object_id": "paper-cup-takeaway"
+    },
+    {
+      "gallery_object_id": "portion-cup-1oz-pp",
+      "runtime_object_id": "portion-cup-1oz-pp"
+    },
+    {
+      "gallery_object_id": "yakult-bottle",
+      "runtime_object_id": "yakult-bottle"
+    }
+  ]
+}

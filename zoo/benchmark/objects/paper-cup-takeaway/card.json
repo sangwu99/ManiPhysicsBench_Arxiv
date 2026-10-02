@@ -1,0 +1,169 @@
+{
+  "object_id": "paper-cup-takeaway",
+  "name": "takeaway cup",
+  "axis": "C",
+  "tier": "high",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 59.8025843501091,
+      "y": 59.8025843501091,
+      "z": 94.50675174593925
+    },
+    "wall_thickness_mm": 0.38,
+    "thickness_record": "0.38 mm (0.375–0.455)",
+    "structure": "shell",
+    "source_ids": [
+      "bench_10_1016_j_jmps_2023_105430"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "shell; OpenRadioss",
+      "criterion": "Plasticity-based preservation fails when max PEEQ ≥ 0.002 over the object shell elements and through-thickness integration points. No minimum affected-volume fraction is required; purely elastic buckling does not satisfy this criterion.",
+      "basis": "Uniaxial reduction of a hardening law identified from published tensile tests.",
+      "missing": [
+        "MD tensile-branch reduction to isotropic J2; compression/directional equivalence not claimed"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": 3420000000.0,
+        "unit": "Pa",
+        "origin": "transferred",
+        "context": "Source MD E1 and ν12 transferred to an isotropic J2 cup; not a reproduction of the complete orthotropic law.",
+        "source_ids": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ]
+      },
+      {
+        "parameter": "ν",
+        "value": 0.4,
+        "unit": "",
+        "origin": "transferred",
+        "context": "Source MD E1 and ν12 transferred to an isotropic J2 cup; not a reproduction of the complete orthotropic law.",
+        "source_ids": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ]
+      },
+      {
+        "parameter": "σy (constitutive reference)",
+        "value": 19978961.434469014,
+        "unit": "Pa",
+        "origin": "calibrated",
+        "context": "Constitutive reference at p = 0; not identical to the experimental 0.2% offset definition.",
+        "source_ids": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      },
+      {
+        "parameter": "plastic law",
+        "value": "42 points; 0.005 max PEEQ",
+        "unit": "",
+        "origin": "calibrated",
+        "context": "MD tensile-branch reduction to isotropic J2; compression/directional equivalence not claimed",
+        "source_ids": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": [],
+        "calibrated_on": []
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 2,
+        "scope": "Representative literature constitutive law and container geometry",
+        "routes": [
+          "constitutive_geometry"
+        ],
+        "status": "material_and_numerical_support"
+      }
+    ],
+    "sources": [
+      "bench_10_1016_j_jmps_2023_105430"
+    ],
+    "tests": [],
+    "calibrations": [],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "J2 reduction and transfer of the paperboard MD tensile branch",
+        "role": "constitutive_verification",
+        "comparison_target": "source_constitutive_law",
+        "results": [
+          {
+            "quantity": "Maximum stress-transfer error",
+            "reference": null,
+            "computed": 0.083133,
+            "unit": "%",
+            "difference": null
+          }
+        ],
+        "limitation": "Single-element constitutive transfer; not a validation of cup damage load or the full orthotropic paperboard model.",
+        "source_ids": [],
+        "record": null,
+        "comparison_id": "paper-cup-takeaway:comparison:1"
+      }
+    ],
+    "proxy_links": [
+      {
+        "object": "Representative Alzweighi2023 paperboard",
+        "transfer": "MD tensile law reduced to isotropic J2; cup thickness specified separately for each mesh.",
+        "justification": "Paperboard tensile/bending plastic resistance represented by a published constitutive law",
+        "limits": "Does not reproduce the full orthotropy, tension/compression asymmetry, layering, or seams of the cup product.",
+        "source_ids": [
+          "bench_10_1016_j_jmps_2023_105430"
+        ]
+      }
+    ],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Plasticity-based preservation fails when max PEEQ ≥ 0.002 over the object shell elements and through-thickness integration points. No minimum affected-volume fraction is required; purely elastic buckling does not satisfy this criterion."
+      }
+    ],
+    "gaps": [
+      "MD tensile-branch reduction to isotropic J2; compression/directional equivalence not claimed",
+      "product-matched commercial cup",
+      "tearing/delamination",
+      "long-term recovery"
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

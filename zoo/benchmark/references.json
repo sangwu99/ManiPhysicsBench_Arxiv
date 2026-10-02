@@ -1,0 +1,197 @@
+[
+  {
+    "id": "bench_arXiv_2211_00190",
+    "title": "Mechanical design principles of avian eggshells for survivability",
+    "authors": "Fan Liu; Xihang Jiang; Zi Chen; Lifeng Wang",
+    "year": 2024,
+    "doi": "10.1016/j.actbio.2024.02.036",
+    "url": "https://doi.org/10.1016/j.actbio.2024.02.036",
+    "kind": "primary_paper",
+    "locator": "arXiv:2211.00190",
+    "short_title": "arXiv 2211 00190",
+    "arxiv": "2211.00190",
+    "preprint_year": 2022
+  },
+  {
+    "id": "bench_10_1016_j_postharvbio_2021_111468",
+    "title": "An extended finite element model for fracture mechanical response of tomato fruit",
+    "authors": [
+      "Dongdong Li",
+      "Zhiguo Li",
+      "Fideline Tchuenbou-Magaia"
+    ],
+    "year": 2021,
+    "doi": "10.1016/j.postharvbio.2021.111468",
+    "url": "https://doi.org/10.1016/j.postharvbio.2021.111468",
+    "kind": "primary_paper",
+    "locator": "10.1016/j.postharvbio.2021.111468",
+    "short_title": "10 1016 j postharvbio 2021 111468"
+  },
+  {
+    "id": "bench_10_1007_s00217_005_1173_9",
+    "title": "Effect of antiviral genetical modification on softening of potato tubers during cooking",
+    "authors": "Jadwiga Sadowska; Josef Vacek; Józef Fornal; Włodzimierz Zagórski-Ostoja",
+    "year": 2005,
+    "doi": "10.1007/s00217-005-1173-9",
+    "url": "https://doi.org/10.1007/s00217-005-1173-9",
+    "kind": "primary_paper",
+    "locator": "10.1007/s00217-005-1173-9",
+    "short_title": "10 1007 s00217 005 1173 9"
+  },
+  {
+    "id": "bench_10_1016_j_postharvbio_2022_111939",
+    "title": "Prediction of the temperature sensitivity of strawberry drop damage using dynamic finite element method",
+    "authors": [
+      "Xue An",
+      "Huijie Liu",
+      "Tobi Fadiji",
+      "Zhiguo Li",
+      "Darko Dimitrovski"
+    ],
+    "year": 2022,
+    "doi": "10.1016/j.postharvbio.2022.111939",
+    "url": "https://doi.org/10.1016/j.postharvbio.2022.111939",
+    "kind": "primary_paper",
+    "locator": "10.1016/j.postharvbio.2022.111939",
+    "short_title": "10 1016 j postharvbio 2022 111939"
+  },
+  {
+    "id": "bench_10_1093_aobpla_plu019",
+    "title": "Biaxial tensile tests identify epidermis and hypodermis as the main structural elements of sweet cherry skin",
+    "authors": [
+      "Martin Brüggenwirth",
+      "Heiko Fricke",
+      "Moritz Knoche"
+    ],
+    "year": 2014,
+    "doi": "10.1093/aobpla/plu019",
+    "url": "https://doi.org/10.1093/aobpla/plu019",
+    "kind": "primary_paper",
+    "locator": "10.1093/aobpla/plu019",
+    "short_title": "10 1093 aobpla plu019"
+  },
+  {
+    "id": "bench_10_3390_horticulturae11040440",
+    "title": "Analysis of Bruising Characteristics of Large-Stone Fruits upon Impact Using Finite Element Method—A Case Study of Postharvest Loquats",
+    "authors": [
+      "Chunxiang Liu",
+      "Baiqiu Li",
+      "Changsu Xu"
+    ],
+    "year": 2025,
+    "doi": "10.3390/horticulturae11040440",
+    "url": "https://doi.org/10.3390/horticulturae11040440",
+    "kind": "primary_paper",
+    "locator": "10.3390/horticulturae11040440",
+    "short_title": "10 3390 horticulturae11040440"
+  },
+  {
+    "id": "bench_10_1016_j_jmps_2023_105430",
+    "title": "Anisotropic damage behavior in fiber-based materials: Modeling and experimental validation",
+    "authors": [
+      "Mossab Alzweighi",
+      "Johan Tryding",
+      "Rami Mansour",
+      "Eric Borgqvist",
+      "Artem Kulachenko"
+    ],
+    "year": 2023,
+    "doi": "10.1016/j.jmps.2023.105430",
+    "url": "https://doi.org/10.1016/j.jmps.2023.105430",
+    "kind": "primary_paper",
+    "locator": "10.1016/j.jmps.2023.105430",
+    "short_title": "10 1016 j jmps 2023 105430"
+  },
+  {
+    "id": "bench_10_3390_polym16152128",
+    "title": "Triaxiality and Plastic-Strain-Dependent Proposed PEAK Parameter for Predicting Crack Formation in Polypropylene Polymer Reservoir Subjected to Pressure Load",
+    "authors": [
+      "Adam Kasprzak"
+    ],
+    "year": 2024,
+    "doi": "10.3390/polym16152128",
+    "url": "https://doi.org/10.3390/polym16152128",
+    "kind": "primary_paper",
+    "locator": "10.3390/polym16152128",
+    "short_title": "10 3390 polym16152128"
+  },
+  {
+    "id": "bench_10_1038_s41598_022_16511_w",
+    "title": "High-accuracy virtual testing of air conditioner’s digital twin focusing on key material’s deformation and fracture behavior prediction",
+    "authors": [
+      "Shaohua Fu",
+      "Zhenping Wan",
+      "Weifeng Lu",
+      "Huaican Liu",
+      "Peng’e Zhang",
+      "Bo Yu",
+      "Jianming Tan",
+      "Feng Pan",
+      "Zhigang Liu"
+    ],
+    "year": 2022,
+    "doi": "10.1038/s41598-022-16511-w",
+    "url": "https://doi.org/10.1038/s41598-022-16511-w",
+    "kind": "primary_paper",
+    "locator": "10.1038/s41598-022-16511-w",
+    "short_title": "10 1038 s41598 022 16511 w"
+  },
+  {
+    "id": "bench_10_3390_polym15204076",
+    "title": "Composites with Re-Entrant Lattice: Effect of Filler on Auxetic Behaviour",
+    "authors": [
+      "Mikhail Tashkinov",
+      "Anastasia Tarasova",
+      "Ilia Vindokurov",
+      "Vadim V. Silberschmidt"
+    ],
+    "year": 2023,
+    "doi": "10.3390/polym15204076",
+    "url": "https://doi.org/10.3390/polym15204076",
+    "kind": "primary_paper",
+    "locator": "10.3390/polym15204076",
+    "short_title": "10 3390 polym15204076"
+  },
+  {
+    "id": "bench_10_3390_agriculture13122201",
+    "title": "Study on Mechanical Properties of Tomatoes for the End-Effector Design of the Harvesting Robot",
+    "authors": [
+      "Shuhe Zheng",
+      "Minglei He",
+      "Xuexin Jia",
+      "Zebin Zheng",
+      "Xinhui Wu",
+      "Wuxiong Weng"
+    ],
+    "year": 2023,
+    "doi": "10.3390/agriculture13122201",
+    "url": "https://doi.org/10.3390/agriculture13122201",
+    "kind": "primary_paper",
+    "locator": "Tables 1 and 5; section 2.5"
+  },
+  {
+    "id": "bench_gharibzahedi_2012_walnut",
+    "title": "Mechanical Behavior of Persian Walnut and Its Kernel under Compression Loading: An Experimental and Computational Study",
+    "authors": "Seyed Mohammad Taghi Gharibzahedi; Seyed Mohammad Mousavi; Manouchehr Hamedi; Faramarz Khodaiyan; Ahmad Dadashpour",
+    "year": 2011,
+    "doi": "10.1111/j.1745-4549.2011.00601.x",
+    "url": "https://doi.org/10.1111/j.1745-4549.2011.00601.x",
+    "kind": "primary_paper"
+  },
+  {
+    "id": "bench_10_1016_j_jfoodeng_2020_110016",
+    "title": "Characterization of textural failure mechanics of strawberry fruit",
+    "authors": [
+      "Xue An",
+      "Zhiguo Li",
+      "Manuela Zude-Sasse",
+      "Fideline Tchuenbou-Magaia",
+      "Yougang Yang"
+    ],
+    "year": 2020,
+    "doi": "10.1016/j.jfoodeng.2020.110016",
+    "url": "https://doi.org/10.1016/j.jfoodeng.2020.110016",
+    "kind": "primary_paper",
+    "locator": "Fig. 5(a), outer-tissue compression and unloading at 1 mm/s"
+  }
+]

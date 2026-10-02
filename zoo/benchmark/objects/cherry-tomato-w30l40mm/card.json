@@ -1,0 +1,291 @@
+{
+  "object_id": "cherry-tomato-w30l40mm",
+  "name": "cherry tomato",
+  "axis": "A",
+  "tier": "mid",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 29.999999329447746,
+      "y": 29.99027818441391,
+      "z": 39.99584540724754
+    },
+    "wall_thickness_mm": 0.2,
+    "thickness_record": "skin 0.2 mm",
+    "structure": "skin_core",
+    "source_ids": [
+      "bench_10_1016_j_postharvbio_2021_111468"
+    ],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "skin_core; CalculiX",
+      "criterion": "Skin maximum principal stress ≥ 2.06 MPa OR flesh maximum principal stress ≥ 0.074 MPa",
+      "basis": "Skin and flesh properties reported for the same specimens.",
+      "missing": [
+        "homogeneous mesocarp reference core; internal chambers omitted",
+        "source tissue means; source whole-fruit fit/precrack not inherited as validation"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "core E",
+        "value": "0.66 MPa",
+        "unit": "",
+        "origin": "reported",
+        "context": "Skin and flesh properties reported for the same specimens.",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "skin E",
+        "value": "18.1 MPa",
+        "unit": "",
+        "origin": "reported",
+        "context": "Skin and flesh properties reported for the same specimens.",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "ν",
+        "value": "0.30",
+        "unit": "",
+        "origin": "reported",
+        "context": "Skin and flesh properties reported for the same specimens.",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "skin tensile threshold",
+        "value": 2.06,
+        "unit": "MPa",
+        "origin": "reported",
+        "context": "Li2021 exocarp",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "id": "p003",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "core tensile threshold",
+        "value": 0.074,
+        "unit": "MPa",
+        "origin": "reported",
+        "context": "Li2021 mesocarp",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "id": "p004",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [
+          "bench_10_1016_j_postharvbio_2021_111468"
+        ],
+        "derived_from": [],
+        "transferred_from": []
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 1,
+        "scope": "Axial compression reaction at the observed rupture displacement",
+        "routes": [
+          "reported_material",
+          "analogous_transfer"
+        ],
+        "status": "conditional_response_comparison"
+      },
+      {
+        "level": 2,
+        "scope": "Skin/core damage-onset criterion for the 40 mm cherry tomato",
+        "routes": [
+          "reported_material",
+          "analogous_transfer"
+        ],
+        "status": "material_and_numerical_support"
+      }
+    ],
+    "sources": [
+      "bench_10_1016_j_postharvbio_2021_111468",
+      "bench_10_3390_agriculture13122201"
+    ],
+    "tests": [
+      {
+        "quantity": "Observed axial rupture force",
+        "value": 141.1,
+        "unit": "N",
+        "test": "Syngenta Sibede, 60–90% red; mean dimensions 72.15 × 69.39 × 57 mm; 100 mm flat platen; observed rupture displacement 14.80 mm",
+        "event": "Whole-fruit rupture observed in the source",
+        "limitation": "Group means; paired specimen-level geometry and force data are unavailable",
+        "source_ids": [
+          "bench_10_3390_agriculture13122201"
+        ],
+        "test_id": "cherry-tomato:test:1"
+      }
+    ],
+    "calibrations": [],
+    "simulations": [
+      {
+        "solver": "CalculiX 2.23",
+        "scope": "Fixed Li2021 materials; one-eighth symmetric fruit model at literature dimensions; axial/radial loading, 5/3 mm meshes, μ=0/0.4",
+        "status": "axial_completed; radial_completed_or_interrupted",
+        "runtime_adopted": false,
+        "material_refitted": false
+      }
+    ],
+    "comparisons": [
+      {
+        "scope": "Axial compression reaction at the observed rupture displacement",
+        "role": "independent_dataset + additional_condition",
+        "comparison_target": "published_experiment",
+        "results": [
+          {
+            "quantity": "Axial reaction (h=5 mm, μ=0)",
+            "reference": 141.1,
+            "computed": 143.46306805098519,
+            "unit": "N",
+            "difference": "+1.67%"
+          },
+          {
+            "quantity": "Axial reaction (h=3 mm, μ=0)",
+            "reference": 141.1,
+            "computed": 144.6199600509852,
+            "unit": "N",
+            "difference": "+2.49%"
+          },
+          {
+            "quantity": "Axial reaction (h=5 mm, μ=0.4)",
+            "reference": 141.1,
+            "computed": 145.4012520509852,
+            "unit": "N",
+            "difference": "+3.05%"
+          },
+          {
+            "quantity": "Axial reaction (h=3 mm, μ=0.4)",
+            "reference": 141.1,
+            "computed": 146.6136040509852,
+            "unit": "N",
+            "difference": "+3.91%"
+          }
+        ],
+        "limitation": "Comparison with a larger tomato of a different cultivar (72.15 × 69.39 × 57 mm). Mean dimensions and the observed rupture displacement of 14.80 mm are inputs; reaction force is the output. Material properties were not refitted. This is not an independent prediction of rupture onset or the 40 mm cherry-tomato grasp threshold.",
+        "source_ids": [
+          "bench_10_1016_j_postharvbio_2021_111468",
+          "bench_10_3390_agriculture13122201"
+        ],
+        "comparison_id": "cherry-tomato:comparison:1"
+      },
+      {
+        "scope": "Endpoint reaction under mesh refinement (5→3 mm)",
+        "role": "numerical_verification",
+        "comparison_target": "mesh_refinement",
+        "results": [
+          {
+            "quantity": "μ=0",
+            "reference": null,
+            "computed": 0.8064040562612895,
+            "unit": "%",
+            "difference": null
+          },
+          {
+            "quantity": "μ=0.4",
+            "reference": null,
+            "computed": 0.8337974968571027,
+            "unit": "%",
+            "difference": null
+          }
+        ],
+        "limitation": "Mesh change of the endpoint reaction, not a literature error or damage-stress convergence measure. The maximum reaction-curve mesh difference from 5% compression to the endpoint is 4.22–4.33%.",
+        "source_ids": [],
+        "comparison_id": "cherry-tomato:comparison:2"
+      },
+      {
+        "scope": "Auxiliary radial calculation: first local damage-criterion crossing",
+        "role": "sensitivity_check_not_matched_rupture_validation",
+        "comparison_target": "mesh_refinement_and_distinct_damage_events",
+        "results": [
+          {
+            "quantity": "μ=0.4, h=5 mm onset bracket",
+            "reference": null,
+            "computed": [
+              90.3515632254926,
+              93.17167715689625
+            ],
+            "unit": "N",
+            "difference": null
+          },
+          {
+            "quantity": "μ=0.4, h=3 mm onset bracket",
+            "reference": null,
+            "computed": [
+              81.95810055295556,
+              84.84183077450736
+            ],
+            "unit": "N",
+            "difference": null
+          }
+        ],
+        "limitation": "The mesh change in onset-bracket midpoint is −9.11%. Local core tensile damage and visible exocarp rupture are different events. The μ=0 runs did not complete. These are not counted as successful rupture-force validation.",
+        "source_ids": [
+          "bench_10_3390_agriculture13122201"
+        ],
+        "comparison_id": "cherry-tomato:comparison:3"
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Skin maximum principal stress ≥ 2.06 MPa OR flesh maximum principal stress ≥ 0.074 MPa"
+      }
+    ],
+    "gaps": [
+      "The damage indicator is 0.344 to 0.519 at the published axial rupture displacement; rupture initiation itself is not reproduced.",
+      "The comparison uses another cultivar and mean size; it does not automatically validate grasp fracture loads of the 40 mm asset.",
+      "Lateral contact and mesh sensitivity include nonconvergent cases."
+    ],
+    "comparison_policy": "Conditional intact-tomato reaction comparisons provide level 1 evidence. The tissue-property damage criterion is recorded separately as level 2. Exploratory incision calculations are not treated as completed fracture validation."
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

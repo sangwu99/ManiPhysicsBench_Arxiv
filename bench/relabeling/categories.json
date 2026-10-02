@@ -1,0 +1,302 @@
+{
+  "almond": {
+    "lift_force_N": 0.02,
+    "damage_force_N": 52.7
+  },
+  "apple": {
+    "lift_force_N": 1.766,
+    "grip_margin_N": 2.234
+  },
+  "avocado": {
+    "lift_force_N": 1.962,
+    "damage_force_N": 10.0
+  },
+  "balloon": {
+    "lift_force_N": 0.049,
+    "grip_margin_N": 0.451
+  },
+  "banana": {
+    "lift_force_N": 1.177,
+    "grip_margin_N": 1.823
+  },
+  "beef": {
+    "lift_force_N": 1.472,
+    "grip_margin_N": 2.028
+  },
+  "beet": {
+    "lift_force_N": 1.472,
+    "damage_force_N": 20.0
+  },
+  "bell": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 3.509
+  },
+  "bell_pepper": {
+    "lift_force_N": 1.472,
+    "grip_margin_N": 2.528
+  },
+  "berries": {
+    "lift_force_N": 0.049,
+    "grip_margin_N": 0.951
+  },
+  "blueberry": {
+    "lift_force_N": 0.02,
+    "grip_margin_N": 1.48
+  },
+  "bottle": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "bowl": {
+    "lift_force_N": 1.962,
+    "grip_margin_N": 2.038
+  },
+  "box": {
+    "lift_force_N": 1.962,
+    "grip_margin_N": 1.038
+  },
+  "bread": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 1.509
+  },
+  "broccoli": {
+    "lift_force_N": 3.433,
+    "damage_force_N": 50.0
+  },
+  "bucket": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "butter_dish": {
+    "lift_force_N": 1.962,
+    "grip_margin_N": 2.038
+  },
+  "can": {
+    "lift_force_N": 3.532,
+    "grip_margin_N": 0.468
+  },
+  "candle": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 2.019
+  },
+  "cap": {
+    "lift_force_N": 0.196,
+    "grip_margin_N": 2.804
+  },
+  "carrot": {
+    "lift_force_N": 0.981,
+    "damage_force_N": 71.9
+  },
+  "cauliflower": {
+    "lift_force_N": 3.924,
+    "damage_force_N": 50.0
+  },
+  "cereal": {
+    "lift_force_N": 0.294,
+    "grip_margin_N": 1.206
+  },
+  "cheese": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 2.009
+  },
+  "chicken": {
+    "lift_force_N": 1.472,
+    "grip_margin_N": 2.028
+  },
+  "chicken_leg": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 3.019
+  },
+  "chicken_wing": {
+    "lift_force_N": 0.785,
+    "grip_margin_N": 3.215
+  },
+  "chocolate": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 2.009
+  },
+  "container": {
+    "lift_force_N": 2.453,
+    "grip_margin_N": 1.547
+  },
+  "corn": {
+    "lift_force_N": 2.453,
+    "damage_force_N": 497.56
+  },
+  "cover": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 2.509
+  },
+  "croissant": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 1.009
+  },
+  "cucumber": {
+    "lift_force_N": 2.453,
+    "grip_margin_N": 1.547
+  },
+  "cup": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 2.019
+  },
+  "detergent": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "egg": {
+    "lift_force_N": 0.589,
+    "damage_force_N": 5.05,
+    "zoo_object_id": "chicken-egg"
+  },
+  "eggplant": {
+    "lift_force_N": 2.453,
+    "damage_force_N": 15.0
+  },
+  "fish": {
+    "lift_force_N": 1.472,
+    "grip_margin_N": 1.528
+  },
+  "french_fry": {
+    "lift_force_N": 0.098,
+    "damage_force_N": 45.0
+  },
+  "generic_food": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 2.019
+  },
+  "glass_cup": {
+    "lift_force_N": 2.453,
+    "grip_margin_N": 1.547
+  },
+  "glass_or_transparent_pot": {
+    "lift_force_N": 3.433,
+    "grip_margin_N": 0.567
+  },
+  "glue": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 3.019
+  },
+  "grape": {
+    "lift_force_N": 0.078,
+    "grip_margin_N": 0.922
+  },
+  "holder": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 3.019
+  },
+  "hot_dog": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 2.009
+  },
+  "ice_cream": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 0.519
+  },
+  "jar": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "lemon": {
+    "lift_force_N": 0.981,
+    "damage_force_N": 12.03
+  },
+  "lime": {
+    "lift_force_N": 0.687,
+    "damage_force_N": 12.0
+  },
+  "mango": {
+    "lift_force_N": 2.453,
+    "grip_margin_N": 1.547
+  },
+  "meat": {
+    "lift_force_N": 1.472,
+    "grip_margin_N": 2.028
+  },
+  "mug": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "mushroom": {
+    "lift_force_N": 0.294,
+    "grip_margin_N": 3.706
+  },
+  "onion": {
+    "lift_force_N": 1.472,
+    "damage_force_N": 12.0
+  },
+  "paper": {
+    "lift_force_N": 0.098,
+    "grip_margin_N": 0.902
+  },
+  "pear": {
+    "lift_force_N": 1.766,
+    "grip_margin_N": 2.234
+  },
+  "pickle": {
+    "lift_force_N": 0.491,
+    "grip_margin_N": 2.509
+  },
+  "pineapple": {
+    "lift_force_N": 9.81,
+    "damage_force_N": 86.0
+  },
+  "plate": {
+    "lift_force_N": 2.453,
+    "grip_margin_N": 1.547
+  },
+  "potato": {
+    "lift_force_N": 1.472,
+    "damage_force_N": 8.15,
+    "zoo_object_id": "boiled-potato"
+  },
+  "pumpkin": {
+    "lift_force_N": 9.81,
+    "damage_force_N": 310.0
+  },
+  "salmon": {
+    "lift_force_N": 1.472,
+    "damage_force_N": 12.0
+  },
+  "salt_container": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "soap": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 2.019
+  },
+  "spool": {
+    "lift_force_N": 0.981,
+    "grip_margin_N": 3.019
+  },
+  "squash": {
+    "lift_force_N": 2.943,
+    "grip_margin_N": 1.057
+  },
+  "strawberry": {
+    "lift_force_N": 0.196,
+    "damage_force_N": 6.4,
+    "zoo_object_id": "strawberry"
+  },
+  "sushi": {
+    "lift_force_N": 0.392,
+    "grip_margin_N": 1.608
+  },
+  "sweet_potato": {
+    "lift_force_N": 1.962,
+    "damage_force_N": 11.36
+  },
+  "tomato": {
+    "lift_force_N": 1.472,
+    "damage_force_N": 11.01,
+    "zoo_object_id": "cherry-tomato-w30l40mm"
+  },
+  "vessel": {
+    "lift_force_N": 1.962,
+    "grip_margin_N": 2.038
+  },
+  "zucchini": {
+    "lift_force_N": 1.962,
+    "grip_margin_N": 2.038
+  }
+}

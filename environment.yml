@@ -1,0 +1,33 @@
+name: maniphysics-fem
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools>=68
+  - cmake=3.31
+  - make
+  - time
+  - gcc_linux-64=13
+  - gxx_linux-64=13
+  - libglu
+  - libgl
+  - xorg-libxrender
+  - xorg-libxcursor
+  - xorg-libxfixes
+  - xorg-libxext
+  - xorg-libxft
+  - xorg-libxinerama
+  - xorg-libx11
+  - fontconfig
+  - pip:
+      - numpy==2.2.6
+      - scipy==1.15.3
+      - trimesh==4.12.2
+      - gmsh==4.15.2
+      - networkx==3.4.2
+      - fast-simplification==0.2.0
+      - mkl-static==2024.2.2
+      - mkl-include==2024.2.2
+      - intel-openmp==2024.2.2

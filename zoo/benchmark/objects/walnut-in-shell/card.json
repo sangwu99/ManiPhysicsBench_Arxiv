@@ -1,0 +1,169 @@
+{
+  "object_id": "walnut-in-shell",
+  "name": "walnut",
+  "axis": "A",
+  "tier": "low",
+  "geometry": {
+    "dimensions_mm": {
+      "x": 24.83414373814042,
+      "y": 33,
+      "z": 23.472580645161297
+    },
+    "wall_thickness_mm": 1.0,
+    "thickness_record": "1.0 mm (assumed)",
+    "structure": "shell",
+    "source_ids": [],
+    "target_extents_mm": null,
+    "gaps": []
+  },
+  "material_properties": {
+    "model": {
+      "law": "shell; CalculiX",
+      "criterion": "Maximum principal stress σ₁: 19.695 MPa",
+      "basis": "High-strength reference used as a control.",
+      "missing": [
+        "high-strength reference; quantitative walnut fracture not validated"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "E",
+        "value": "3.88 GPa",
+        "unit": "",
+        "origin": "unresolved",
+        "context": "High-strength-control inputs; the exact source of this parameter bundle is unresolved and is not claimed as measured material data.",
+        "source_ids": [],
+        "id": "p000",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "ν",
+        "value": "0.30",
+        "unit": "",
+        "origin": "unresolved",
+        "context": "High-strength-control inputs; the exact source of this parameter bundle is unresolved and is not claimed as measured material data.",
+        "source_ids": [],
+        "id": "p001",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": []
+      },
+      {
+        "parameter": "Constitutive law",
+        "value": "Linear elastic",
+        "unit": "",
+        "origin": "unresolved",
+        "context": "High-strength-control inputs; the exact source of this parameter bundle is unresolved and is not claimed as measured material data.",
+        "source_ids": [],
+        "id": "p002",
+        "stage": "registered_record",
+        "region": "",
+        "reported_in": [],
+        "derived_from": [],
+        "transferred_from": []
+      }
+    ]
+  },
+  "supporting_references": {
+    "evidence": [
+      {
+        "level": 2,
+        "scope": "High-strength control role over the observed load range",
+        "routes": [],
+        "status": "literature_load_margin_support"
+      },
+      {
+        "level": 3,
+        "scope": "Quantitative strength of the adopted walnut shell",
+        "routes": [
+          "test_calibration"
+        ],
+        "status": "provenance_gap"
+      }
+    ],
+    "sources": [
+      "bench_gharibzahedi_2012_walnut"
+    ],
+    "tests": [
+      {
+        "quantity": "Lowest reported shell-rupture onset load",
+        "value": 40.17,
+        "unit": "N",
+        "event": "shell_rupture_onset",
+        "test": "Persian walnut; source orientations and moisture conditions, compression speed 50 mm/min.",
+        "source_ids": [
+          "bench_gharibzahedi_2012_walnut"
+        ],
+        "limitation": "A low value among the tested conditions, not a lower bound for every walnut.",
+        "test_id": "walnut-in-shell:test:1"
+      }
+    ],
+    "calibrations": [],
+    "simulations": [],
+    "comparisons": [
+      {
+        "scope": "Benchmark force margin relative to reported shell-rupture loads",
+        "role": "loading_margin_comparison",
+        "comparison_target": "reported_shell_rupture_onset + recorded_grasp_forces",
+        "results": [
+          {
+            "quantity": "Maximum per-jaw force in successful episodes",
+            "reference": 40.17,
+            "computed": 16.044,
+            "unit": "N",
+            "difference": null
+          },
+          {
+            "quantity": "Maximum observed force / lowest reported rupture-onset load",
+            "reference": null,
+            "computed": 0.3994,
+            "unit": "ratio",
+            "difference": null
+          },
+          {
+            "quantity": "Minimum directly computed threshold",
+            "reference": null,
+            "computed": 37.68,
+            "unit": "N",
+            "difference": null
+          },
+          {
+            "quantity": "Maximum observed force / minimum directly computed threshold",
+            "reference": null,
+            "computed": 0.4258,
+            "unit": "ratio",
+            "difference": null
+          }
+        ],
+        "limitation": "Comparison of per-jaw forces in successful episodes with the lowest reported rupture-onset load across the source orientations and moisture conditions at 50 mm/min. This supports the high-strength control role over the evaluated loads; it neither assigns this provenance to the modulus and tensile strength nor establishes a universal lower bound for all walnuts.",
+        "source_ids": [
+          "bench_gharibzahedi_2012_walnut"
+        ],
+        "comparison_id": "walnut-in-shell:comparison:1"
+      }
+    ],
+    "proxy_links": [],
+    "assessment_criteria": [
+      {
+        "origin": "benchmark_definition",
+        "criterion": "Maximum principal stress σ₁: 19.695 MPa"
+      }
+    ],
+    "gaps": [
+      "The precise primary source and original inverse-calibration artifact for the 150 N fracture target have not been recovered.",
+      "The exact measured source of E = 3.88 GPa has not been recovered.",
+      "Use as a strong control is distinct from quantitative fracture-force validation."
+    ]
+  },
+  "mesh": {
+    "collision": "collision.obj",
+    "fem_surface": "fem_surface.obj",
+    "visual": "visual.glb"
+  }
+}

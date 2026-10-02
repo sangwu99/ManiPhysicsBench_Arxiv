@@ -1,0 +1,156 @@
+{
+  "assets": [
+    {
+      "asset": "zoo/assets/objects/bridge-broccoli/visual/bridge-broccoli.glb",
+      "author": "Meerschaum Digital (https://sketchfab.com/meerschaumdigital)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/broccoli-0fb58ca488b64298ab8af6f0372e66b9",
+      "title": "Broccoli",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-bell/visual/bridge-bell.glb",
+      "author": "ClintonAbbott.Art (https://sketchfab.com/clintonabbott.art)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/desk-bell-cc21b304c4bb4750bdde7a8fb538b116",
+      "title": "Desk Bell",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-cover/visual/cover.glb",
+      "author": "shtran (https://sketchfab.com/shtran)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/food-cover-cloche-plate-platter-3ac8550c8f834e3698321f7a3f462e0b",
+      "title": "Food Cover Cloche Plate Platter",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-cucumber/visual/bridge-cucumber.glb",
+      "author": "Meerschaum Digital (https://sketchfab.com/meerschaumdigital)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/cucumber-game-ready-2k-pbr-389e61e3fd1e4eacad0000f2e7c31f83",
+      "title": "Cucumber (Game Ready / 2K PBR)",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-lemon/visual/bridge-lemon.glb",
+      "author": "federyuk91 (https://sketchfab.com/federyuk91)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lemon-limone-de2850e394424330aace7c165b4a0c08",
+      "title": "Lemon, Limone",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-lime/visual/bridge-lime.glb",
+      "author": "Meerschaum Digital (https://sketchfab.com/meerschaumdigital)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/lime-game-ready-2k-pbr-d879c2985526427b96a39733dc2a075c",
+      "title": "Lime (Game Ready / 2K PBR)",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-onion/visual/onion.glb",
+      "author": "rhcreations (https://sketchfab.com/rhcreations)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/onion-1eb9bc82080f4d9a98ad696f26ab1576",
+      "title": "Onion",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-pumpkin/visual/bridge-pumpkin.glb",
+      "author": "SleepyPineapple (https://sketchfab.com/SleepyPineapple)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pumpkin-79f906eceb3640bf8729b903cdd47f9b",
+      "title": "Pumpkin",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-squash/visual/squash.glb",
+      "author": "STUDIO DUCKBILL (https://sketchfab.com/DuckbillStudio)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/butternut-squash-8a36fcb9485d4071b43415b595bd6c9d",
+      "title": "Butternut Squash (\u30d0\u30bf\u30fc\u30ca\u30c3\u30c4\u304b\u307c\u3061\u3083)",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-sweet-potato/visual/sweet_potato.glb",
+      "author": "hanariyoung (https://sketchfab.com/hanariyoung)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/sweet-potato-82c003cd4d724fc4b21bc61cfe7168ec",
+      "title": "Sweet Potato",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-vessel/visual/vessel.glb",
+      "author": "propmaker1 (https://sketchfab.com/menX1151)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/solid-cooking-pot-1b4f37a2fa5e4037a047bd708788b458",
+      "title": "Solid cooking Pot",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-cap/visual/bridge-cap.glb",
+      "author": "reramil (https://sketchfab.com/reramil)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/bottle-cap-from-childhood-26b13f41528645278dc21bc5405d5880",
+      "title": "Bottle cap from childhood",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-detergent/visual/bridge-detergent.glb",
+      "author": "sirfizx (https://sketchfab.com/sirfizx)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/dish-detergent-68a23aa70dc84a9a8d27f902a9b3b5e4",
+      "title": "Dish Detergent",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-glue/visual/bridge-glue.glb",
+      "author": "stfuaahil (https://sketchfab.com/stfuaahil)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/glue-bottle-8f91c8457fec4204a76dad9b5fd9d0df",
+      "title": "Glue Bottle",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-salt-container/visual/bridge-salt-container.glb",
+      "author": "C.U.V (https://sketchfab.com/C.U.V)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/salt-shaker-e0b380d2819249ecbb75c2552bedd0a1",
+      "title": "Salt shaker",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-cauliflower/visual/bridge-cauliflower.glb",
+      "author": "jumbonot (https://sketchfab.com/jumbonot)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/cauliflower-90be4b4c59684ec89cebae312aac7e92",
+      "title": "Cauliflower",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-corn/visual/bridge-corn.glb",
+      "author": "IronEqual (https://sketchfab.com/ie-niels)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ear-of-corn-from-poly-by-google-7cfd70bed0ab46f28b1341b73ff68d4d",
+      "title": "Ear of corn from Poly by Google",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-pineapple/visual/bridge-pineapple.glb",
+      "author": "k0dapup (https://sketchfab.com/k0dapup)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/pineapple-fa7360e479884bbfbab6f7f3cff23c23",
+      "title": "pineapple",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    },
+    {
+      "asset": "zoo/assets/objects/bridge-salmon/visual/bridge-salmon.glb",
+      "author": "scrampunk (https://sketchfab.com/scrampunk)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/salmon-c13528cb6aa4497eaad832124ef2986b",
+      "title": "Salmon",
+      "modifications": "Geometry or visual appearance may differ from the source."
+    }
+  ]
+}
